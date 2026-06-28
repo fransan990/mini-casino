@@ -1,0 +1,29 @@
+{
+  "name": "mini-casino",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Mini casino web app with DDD architecture, separated frontend and backend.",
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm -r --parallel dev",
+    "dev:frontend": "pnpm --filter frontend dev",
+    "dev:backend": "pnpm --filter backend start:dev",
+    "build": "pnpm -r build",
+    "lint": "pnpm -r lint",
+    "test": "pnpm -r test",
+    "new:front-module": "node tools/create-front-module.mjs",
+    "new:back-module": "node tools/create-back-module.mjs"
+  },
+  "keywords": [
+    "casino",
+    "ddd",
+    "typescript",
+    "react",
+    "vite",
+    "nestjs",
+    "postgresql",
+    "prisma"
+  ],
+  "author": "",
+  "license": "MIT"
+}

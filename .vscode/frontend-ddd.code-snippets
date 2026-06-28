@@ -1,0 +1,28 @@
+{
+  "Frontend DDD Module Architecture": {
+    "prefix": "ddd-front-module",
+    "description": "Frontend DDD module architecture template",
+    "body": [
+      "apps/frontend/src/modules/${1:module-name}/",
+      "  domain/",
+      "    models/",
+      "    value-objects/",
+      "    errors/",
+      "",
+      "  application/",
+      "    use-cases/",
+      "    hooks/",
+      "    dto/",
+      "",
+      "  infrastructure/",
+      "    api/",
+      "    mappers/",
+      "",
+      "  presentation/",
+      "    components/",
+      "    pages/",
+      "",
+      "  index.ts"
+    ]
+  }
+}
