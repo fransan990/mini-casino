@@ -1,13 +1,39 @@
-const API_URL = import.meta.env.VITE_API_URL;
+import type { SignInDTO } from "../../application/dto/SignInDTO";
+import type { SignUpDTO } from "../../application/dto/SignUpDTO";
+import type { AuthSession } from "../../domain/models/AuthSession";
+
+function wait(milliseconds: number): Promise<void> {
+  return new Promise((resolve) => {
+    window.setTimeout(resolve, milliseconds);
+  });
+}
 
 export const authApi = {
-  async getAll() {
-    const response = await fetch(`${API_URL}/auth`);
+  async signIn(dto: SignInDTO): Promise<AuthSession> {
+    await wait(600);
 
-    if (!response.ok) {
-      throw new Error("Error fetching auth");
-    }
+    return {
+      accessToken: "development-access-token",
+      user: {
+        id: "dev-user-id",
+        username: dto.email.split("@")[0] || "player",
+        email: dto.email,
+        chips: 5000,
+      },
+    };
+  },
 
-    return response.json();
-  }
+  async signUp(dto: SignUpDTO): Promise<AuthSession> {
+    await wait(600);
+
+    return {
+      accessToken: "development-access-token",
+      user: {
+        id: crypto.randomUUID(),
+        username: dto.username,
+        email: dto.email,
+        chips: 5000,
+      },
+    };
+  },
 };

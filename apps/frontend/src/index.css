@@ -10,15 +10,94 @@ body {
     BlinkMacSystemFont,
     "Segoe UI",
     sans-serif;
-  background: #111;
+  background:
+    radial-gradient(circle at top, #2d1b69 0, transparent 35%),
+    #0f0f14;
   color: #fff;
 }
 
 a {
-  color: inherit;
+  color: #f7c948;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 main {
   min-height: 100vh;
   padding: 2rem;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  border-radius: 0.75rem;
+  padding: 0.8rem 1rem;
+  background: #f7c948;
+  color: #111;
+  font-weight: 700;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+input {
+  width: 100%;
+  border: 1px solid #39394a;
+  border-radius: 0.75rem;
+  padding: 0.8rem 1rem;
+  background: #181824;
+  color: #fff;
+}
+
+label {
+  font-weight: 700;
+}
+
+.auth-page {
+  display: grid;
+  place-items: center;
+}
+
+.auth-card {
+  width: min(100%, 420px);
+  border: 1px solid #2d2d3a;
+  border-radius: 1.25rem;
+  padding: 2rem;
+  background: rgba(20, 20, 31, 0.92);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+}
+
+.auth-card h1 {
+  margin-bottom: 0.5rem;
+}
+
+.auth-card p {
+  color: #c9c9d4;
+}
+
+.auth-form {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.form-field {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.form-error {
+  margin: 0;
+  color: #ff6b6b;
+  font-size: 0.9rem;
 }
