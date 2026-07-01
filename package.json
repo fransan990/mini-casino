@@ -12,7 +12,8 @@
     "lint": "pnpm -r lint",
     "test": "pnpm -r test",
     "new:front-module": "node tools/create-front-module.mjs",
-    "new:back-module": "node tools/create-back-module.mjs"
+    "new:back-module": "node tools/create-back-module.mjs",
+    "new:landing-component": "node tools/create-landing-component.mjs"
   },
   "keywords": [
     "casino",
